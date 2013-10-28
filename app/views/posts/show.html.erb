@@ -1,3 +1,8 @@
+
+
+<p>
+  <%= image_tag(@post.picture_url, :width => 200) if @post.picture.present? %>
+</p>
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
