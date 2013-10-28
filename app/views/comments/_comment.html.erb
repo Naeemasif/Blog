@@ -7,4 +7,6 @@
   <strong>Comment:</strong>
   <%= comment.body %>
 </p>
+<p>Posted <%= distance_of_time_in_words(comment.post.created_at, comment.created_at) %> later</p>
+
 <%= link_to 'Delete comment', [comment.post , comment],method: :delete , data: {confirm: 'Are you sur'} %>

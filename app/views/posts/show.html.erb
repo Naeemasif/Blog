@@ -7,7 +7,8 @@
   <strong>Text:</strong>
   <%= @post.text %>
 </p>
-<h2>Comments</h2>
+<h3>Comments (<%= @post.comments.size %>)</h3>
+
 <%= render @post.comments %>
 <h2>Add Comment</h2>
 <%= render 'comments/form' %>
