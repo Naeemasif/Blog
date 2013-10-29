@@ -5,6 +5,10 @@ Railsblog::Application.routes.draw do
       resources :comments
     end
   root to: 'posts#index'
+  get '/contact_us' =>'posts#contact_us'
+  post '/posts/hello' =>'posts#hello'
+  get '/posts/hello' =>'posts#hello'
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

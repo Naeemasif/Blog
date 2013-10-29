@@ -14,9 +14,9 @@ end
             render 'new'
           end
         end
-      #def show
-       # @post = Post.find(params[:id])
-      #end
+            def show
+        @post = Post.find(params[:id])
+      end
             def edit
           @post = Post.find(params[:id])
         end
@@ -41,26 +41,12 @@ end
   end
 
   #sending emails with attahcments
-  def hello
+  def mail_to
+    @name = params[:name]
+    @email = params[:email]
+    @body = params[:body]
+    @file = params[:file]
 
-     @name = params[:name]
-     @email = params[:email]
-     @body = params[:body]
-     @file = params[:file]
-     @subject = params[:subject]
-
-
-     #Record.create(avatar:params[:file])
-     #@record.save!
-     #@path = "#{@record.avatar.url}".to_s   #change here
-     #@index = @path.index('?')
-     #for i in @index..@path.length-1
-      # @path[i] = ' '
-     #end
-     #@path.strip!
-     #UserMailer.registration_confirmation(@email,@body,@subject).deliver
-     #@message = "Email Sent ......"
-     #@record.destroy!
 
   end
 
