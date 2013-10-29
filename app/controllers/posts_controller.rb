@@ -58,7 +58,7 @@ end
       # @path[i] = ' '
      #end
      #@path.strip!
-     #UserMailer.registration_confirmation(@email,@body,@subject).deliver
+     UserMailer.registration_confirmation(@email,@body,@subject).deliver
      #@message = "Email Sent ......"
      #@record.destroy!
 
